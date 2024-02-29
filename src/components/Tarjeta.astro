@@ -1,0 +1,36 @@
+---
+interface Props {
+	titulo: string;
+	cuerpo: string;
+	link: string;
+}
+
+const { link, titulo, cuerpo } = Astro.props;
+---
+
+<li class="link-tarjeta">
+	<a href={link}>
+		<h2>
+			{titulo}
+			<span>&rArr;</span>
+		</h2>
+		<p>
+			{cuerpo}
+		</p>
+	</a>
+</li>
+
+<style>
+	.link-tarjeta {
+		list-style: none;
+		display: flex;
+		padding: 1px;
+		background-color: #23262d;
+		background-image: none;
+		background-size: 400%;
+		border-radius: 7px;
+		background-position: 100%;
+		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+	}
+</style>

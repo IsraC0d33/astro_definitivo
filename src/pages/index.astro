@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Tarjeta from '../components/Tarjeta.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -33,6 +36,7 @@ import Card from '../components/Card.astro';
 				</linearGradient>
 			</defs>
 		</svg>
+		<Navigation />
 		<h1>Portafolio <span class="text-gradient">Isra</span></h1>
 		<p class="instructions">
 			Hola <code>src/pages</code> in your project.<br />
@@ -59,8 +63,14 @@ import Card from '../components/Card.astro';
 				title="Community"
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
+			<Tarjeta
+				link='https://astro.build/chat/'
+				titulo='Hola'
+				cuerpo='lorem ipsum jejeje'
+			/>
 		</ul>
 	</main>
+	<Footer />
 </Layout>
 
 <style>
